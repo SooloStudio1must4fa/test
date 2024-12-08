@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connect, share, and explore your world with SociaLink.">
+    <title>Chime - Ana sayfa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f9;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #333;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: #f90;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #f90;
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content h1 span {
+            color: #f90;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            text-decoration: none;
+            background: #f90;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #ffac33;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 1rem;
+            background: #fff;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature {
+            background: #f4f4f9;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature img {
+            width: 100px;
+            margin-bottom: 1rem;
+        }
+
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            border-top: 4px solid #f90;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+ /* Loading Screen Styles */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+.loader-container {
+    text-align: center;
+}
+
+.loader-circle {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #f90;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 2s linear infinite;
+    margin-bottom: 20px;
+}
+
+.loader p {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Animation for spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Animation for fadeIn text */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Main Content Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: #f90;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background: #f90;
+    color: #333;
+}
+
+    </style>
+</head>
+
+<body>
+
+
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo"><span>Chime</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a id="signup-link" href="signup.html" style="display: inline;">Kayıt Ol</a></li>
+                    <li><a id="login-link" href="login.html" style="display: inline;">Giriş Yap</a></li>
+                    <li><a id="profile-link" href="profile.html" style="display: none;">Profil</a></li>
+                    <li><a id="settings-link" href="settings.html" style="display: none;">Ayarlar</a></li>
+                    <li><a  href="help.html"  >iletişim</a></li>
+
+                    <li><a id="logout-link" href="login.html" style="display: none; background-color: red;">Çıkış Yap</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Hoş Geldiniz <span>SociaLink</span></h1>
+            <p>Dünyayla bağlantı kurmanın ve paylaşmanın yeni bir yolunu deneyimleyin.</p>
+            <a href="signup.html" class="btn-primary">Hemen Katıl</a>
+        </div>
+    </section>
+    
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Platformun Öne Çıkan Özellikleri</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <img src="https://via.placeholder.com/150" alt="Gönderi Oluştur">
+                    <h3>Gönderi Oluştur</h3>
+                    <p>Düşüncelerinizi, fotoğraflarınızı ve videolarınızı anında paylaşın.</p>
+                </div>
+                <div class="feature">
+                    <img src="https://via.placeholder.com/150" alt="Etkileşim Kur">
+                    <h3>Etkileşim Kur</h3>
+                    <p>Beğenin, yorum yapın ve en sevdiğiniz içeriklerle bağlantı kurun.</p>
+                </div>
+                <div class="feature">
+                    <img src="https://via.placeholder.com/150" alt="Mesajlaşma">
+                    <h3>Mesajlaşma</h3>
+                    <p>Özel mesajlaşma özellikleriyle bağlantıda kalın.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SociaLink. Tüm hakları saklıdır. | mustafa seleme ile tasarlandı</p>
+        </div>
+    </footer>
+    
+    <script>
+        window.onload = function () {
+            // LocalStorage'dan giriş durumu kontrolü
+            if (localStorage.getItem("isLoggedIn") === "true") {
+                document.getElementById("profile-link").style.display = "inline";
+                document.getElementById("login-link").style.display = "none";
+                document.getElementById("signup-link").style.display = "none";
+                document.getElementById("logout-link").style.display = "inline";
+                document.getElementById("settings-link").style.display = "inline";
+            } else {
+                document.getElementById("profile-link").style.display = "none";
+                document.getElementById("login-link").style.display = "inline";
+                document.getElementById("signup-link").style.display = "inline";
+                document.getElementById("logout-link").style.display = "none";
+                document.getElementById("settings-link").style.display = "none";
+            }
+    
+            // Loading animation handling
+            setTimeout(function () {
+                // Hide the loader
+                document.getElementById('loader').style.display = 'none';
+    
+                // Show the main content
+                document.getElementById('main-content').style.display = 'block';
+            }, 1000); // Wait 3 seconds for loading animation
+        };
+    
+        // Logout functionality
+        document.getElementById("logout-link").addEventListener("click", function (event) {
+            // Prevent default action (navigation to login page)
+            event.preventDefault();
+    
+            // Remove the user data from localStorage
+            localStorage.removeItem("isLoggedIn");
+            localStorage.removeItem("currentUser");
+    
+            // Optionally, redirect the user to the login page after logout
+            window.location.href = "login.html";
+        });
+    </script>
+    
+</body>
+
+</html>
